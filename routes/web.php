@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,7 +62,16 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function () {
         Route::put('{post:slug}', [PostController::class, 'update'])->name('update');
         Route::get('{post:slug}', [PostController::class, 'show'])->name('show');
     });
+
+    // File Attachment
     Route::post('trix-attachment', [PostController::class, 'trix'])->name('trix-attachment');
+
+    // Users
+    Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
+        Route::get('/', [UserController::class, 'index'])->name('index');
+        Route::delete('{user}/delete', [UserController::class, 'destroy'])->name('delete');
+        Route::get('{user}/edit', [UserController::class, 'edit'])->name('edit');
+    });
 });
 
 Route::get('/{post:slug}', [BlogController::class, 'show'])->name('blog.show');

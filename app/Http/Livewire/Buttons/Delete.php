@@ -22,7 +22,7 @@ class Delete extends Component
         File::delete(storage_path('app/public/images/' . $this->post->cover_image));
         $this->post->delete();
 
-        session()->flash('success', 'Post Succesfully Deleted');
+        session()->flash('success', 'Пост Успішно Видалено!');
 
         return redirect()->route('posts.index');
     }

@@ -43,7 +43,7 @@ class Form extends Component
             ->bcc('your@email.com', 'Your Name')
             ->send(new SubscriberMailable($data));
 
-        session()->flash('success', 'You are subscribed!');
+        session()->flash('success', 'Ви успішно підписалися!');
 
         $this->reset();
     }
