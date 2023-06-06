@@ -79,7 +79,7 @@
 
                             {{-- Tags --}}
                             <div>
-                                <x-jet-label for="tags" value="{{ __('Основний текст') }}" />
+                                <x-jet-label for="tags" value="{{ __('Теги') }}" />
                                 <select name="tags[]" id="create-post" multiple x-data="{}" x-init="function () { choices($el) }">
                                     @foreach ($tags as $tag )
                                     <option value="{{ $tag->id }}">{{ $tag->name }}</option>

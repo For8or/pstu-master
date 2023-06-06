@@ -27,11 +27,9 @@
 
                 @auth
                 {{-- Dashboard --}}
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex text-black">
-                    <x-jet-nav-link href="{{ route('dashboard.index') }}" :active="request()->routeIs('dashboard.index')">
-                        {{ __('Панель Адміністратора') }}
-                    </x-jet-nav-link>
-                </div>
+                <li class="mr-3">
+                    <a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline" href="{{ route('dashboard.index') }}">Панель Адміністратора</a>
+                </li>
                 @else
                 <li class="mr-3">
                     <a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline" href="{{ route('login') }}">Вхід</a>

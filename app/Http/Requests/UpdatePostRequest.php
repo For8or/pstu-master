@@ -30,7 +30,7 @@ class UpdatePostRequest extends FormRequest
             'body'              => ['required', 'min:5'],
             'published_at'      => ['required'],
             'tags'              => [],
-            'meta_description'  => ['min:5', 'max:250']
+            'meta_description'  => []
         ];
     }
 }

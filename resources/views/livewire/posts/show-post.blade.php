@@ -1,12 +1,15 @@
 <div class="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-8 mx-auto">
 
     {{-- Main Content --}}
-    <div class="col-span-2 md:col-span-3 space-y-3">
-        @foreach ($posts as $post)
-        <div class="bg-indigo">
-            <x-blog.post :post="$post" />
+    <div class="col-span-2 md:col-span-3">
+        
+        <div class="space-y-3 bg-indigo">
+            @foreach ($posts as $post)
+            <div class="">
+                <x-blog.post :post="$post"></x-blog.post>
+            </div>
+            @endforeach
         </div>
-        @endforeach
 
         {{-- Page Links --}}
         <div class="p-2">
