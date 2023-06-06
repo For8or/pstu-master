@@ -71,6 +71,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'dashboard'], function () {
         Route::get('/', [UserController::class, 'index'])->name('index');
         Route::delete('{user}/delete', [UserController::class, 'destroy'])->name('delete');
         Route::get('{user}/edit', [UserController::class, 'edit'])->name('edit');
+        Route::put('{user}', [UserController::class, 'update'])->name('update');
     });
 });
 

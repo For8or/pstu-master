@@ -55,9 +55,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,User $user)
     {
-        //
+        $user->update([
+            'role'  => $request->role,
+        ]);
+
+        return redirect()->route('users.index')->with('success', 'Роль користувача успішно оновлена!');
     }
 
 
@@ -71,6 +75,6 @@ class UserController extends Controller
     {
         $user->delete();
 
-        return redirect()->route('users.index')->with('success', 'User successfully deleted!');
+        return redirect()->route('users.index')->with('success', 'Користувача успішно видалено!');
     }
 }
