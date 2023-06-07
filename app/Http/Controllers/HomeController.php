@@ -21,4 +21,8 @@ class HomeController extends Controller
                 ->get(),
         ]);
     }
+    public function contacts()
+    {
+        return view('home.contacts');
+    }
 }

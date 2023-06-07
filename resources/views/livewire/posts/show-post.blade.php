@@ -5,9 +5,8 @@
         
         <div class="space-y-3 bg-indigo">
             @foreach ($posts as $post)
-            <div class="">
                 <x-blog.post :post="$post"></x-blog.post>
-            </div>
+                {{-- Сессия посмотреть в навигации не дашборда, добавить чеки + файлы в постах, установить рероуты для обычных юзеров --}}
             @endforeach
         </div>
 

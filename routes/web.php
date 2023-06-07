@@ -22,6 +22,7 @@ use App\Http\Controllers\UserController;
 
 // Home Route
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 

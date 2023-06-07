@@ -3,7 +3,7 @@
 
     <form wire:submit.prevent="formSubmit">
 
-        <div class="container max-w-4xl mx-auto space-y-5 text-left">
+        <div class="container max-w-screen md:max-w-4xl mx-auto space-y-5 text-left">
 
             {{-- Name --}}
             <div>

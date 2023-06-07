@@ -1,6 +1,6 @@
 <footer class="w-full bg-white flex">
-    <div class="container px-8 mx-auto flex">
-        <div class="flex flex-col w-full py-6 md:flex-row">
+    <div class="container mx-auto flex">
+        <div class="flex flex-col w-full px-8 py-6 md:flex-row">
             <div class="flex-auto flex items-center md:pl-72">
                 <img class="h-28 pb-1" src="https://pstu.edu/wp-content/uploads/2019/06/ПГТУ-лого-300x281.png" alt="ДВНЗ «ПДТУ»">
                 {{-- Logo --}}

@@ -24,7 +24,9 @@
                 <li class="mr-3">
                     <a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline" href="{{ route('blog') }}">Новини</a>
                 </li>
-
+                <li class="mr-3">
+                    <a class="inline-block px-4 py-2 text-black no-underline hover:text-gray-800 hover:text-underline" href="{{ route('contacts') }}">Контакти</a>
+                </li>
                 @auth
                 {{-- Dashboard --}}
                 <li class="mr-3">
